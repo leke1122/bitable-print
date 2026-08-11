@@ -1,0 +1,299 @@
+{
+  "version": "1.0.0",
+  "meta": {
+    "id": "preset-statement-001",
+    "name": "对账单",
+    "description": "用于核对往来账目，支持显示日期、金额、余额等信息，适用于财务对账场景",
+    "version": "1.0.0",
+    "createdAt": 1704067200000,
+    "updatedAt": 1704067200000,
+    "category": "财务",
+    "thumbnail": "",
+    "isPreset": true
+  },
+  "page": {
+    "paperSize": "A4",
+    "orientation": "portrait",
+    "margin": {
+      "top": 20,
+      "right": 20,
+      "bottom": 20,
+      "left": 20,
+      "header": 15,
+      "footer": 15
+    },
+    "background": "#ffffff",
+    "headerEnabled": false,
+    "footerEnabled": false,
+    "headerContent": "",
+    "footerContent": "第 {pageNumber} 页 / 共 {totalPages} 页"
+  },
+  "components": [
+    {
+      "id": "comp-title-001",
+      "type": "text",
+      "position": { "x": 0, "y": 0 },
+      "size": { "width": 170, "height": 50 },
+      "rotation": 0,
+      "zIndex": 1,
+      "locked": false,
+      "visible": true,
+      "content": "对账单",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 28,
+        "fontWeight": "bold",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "center",
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    },
+    {
+      "id": "comp-company-001",
+      "type": "text",
+      "position": { "x": 0, "y": 55 },
+      "size": { "width": 170, "height": 20 },
+      "rotation": 0,
+      "zIndex": 2,
+      "locked": false,
+      "visible": true,
+      "content": "北京某某科技有限公司",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 14,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#646a73",
+        "textAlign": "center",
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    },
+    {
+      "id": "comp-info-line-001",
+      "type": "line",
+      "position": { "x": 0, "y": 80 },
+      "size": { "width": 170, "height": 1 },
+      "rotation": 0,
+      "zIndex": 3,
+      "locked": false,
+      "visible": true,
+      "style": {
+        "borderTop": "1px solid #e2e4e9"
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    },
+    {
+      "id": "comp-customer-001",
+      "type": "text",
+      "position": { "x": 0, "y": 90 },
+      "size": { "width": 170, "height": 60 },
+      "rotation": 0,
+      "zIndex": 4,
+      "locked": false,
+      "visible": true,
+      "content": "客户名称：{{客户名称}}\n客户编号：{{客户编号}}\n对账日期：{{对账日期}}",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "left",
+        "lineHeight": 1.8,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0,
+        "whiteSpace": "pre-wrap"
+      },
+      "binding": {
+        "fieldId": "",
+        "fieldName": "",
+        "format": {
+          "dateFormat": "YYYY-MM-DD"
+        },
+        "fallback": ""
+      },
+      "condition": null
+    },
+    {
+      "id": "comp-table-header-001",
+      "type": "text",
+      "position": { "x": 0, "y": 155 },
+      "size": { "width": 170, "height": 30 },
+      "rotation": 0,
+      "zIndex": 5,
+      "locked": false,
+      "visible": true,
+      "content": "日期          摘要                    收入        支出        余额",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "backgroundColor": "#f7f8fa",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 8
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    },
+    {
+      "id": "comp-table-001",
+      "type": "table",
+      "position": { "x": 0, "y": 185 },
+      "size": { "width": 170, "height": 180 },
+      "rotation": 0,
+      "zIndex": 6,
+      "locked": false,
+      "visible": true,
+      "content": "",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 10,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "left",
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": {
+        "fieldId": "",
+        "fieldName": "",
+        "format": {},
+        "fallback": ""
+      },
+      "tableConfig": {
+        "columns": [
+          { "id": "col-date", "title": "日期", "fieldId": "", "fieldName": "日期", "width": 25, "align": "left" },
+          { "id": "col-desc", "title": "摘要", "fieldId": "", "fieldName": "摘要", "width": 70, "align": "left" },
+          { "id": "col-income", "title": "收入", "fieldId": "", "fieldName": "收入", "width": 25, "align": "right" },
+          { "id": "col-expense", "title": "支出", "fieldId": "", "fieldName": "支出", "width": 25, "align": "right" },
+          { "id": "col-balance", "title": "余额", "fieldId": "", "fieldName": "余额", "width": 25, "align": "right" }
+        ],
+        "dataSource": "currentRecords",
+        "showHeader": false,
+        "alternateRows": true,
+        "alternateRowsStyle": { "backgroundColor": "#fafafa" }
+      },
+      "condition": null
+    },
+    {
+      "id": "comp-total-001",
+      "type": "text",
+      "position": { "x": 0, "y": 370 },
+      "size": { "width": 170, "height": 25 },
+      "rotation": 0,
+      "zIndex": 7,
+      "locked": false,
+      "visible": true,
+      "content": "合计金额（大写）：{{合计金额大写}}    ¥ {{合计金额}}",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "right",
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": {
+        "fieldId": "",
+        "fieldName": "",
+        "format": {
+          "decimalPlaces": 2,
+          "thousandSeparator": true,
+          "prefix": "¥ "
+        },
+        "fallback": ""
+      },
+      "condition": null
+    },
+    {
+      "id": "comp-remark-001",
+      "type": "text",
+      "position": { "x": 0, "y": 400 },
+      "size": { "width": 170, "height": 50 },
+      "rotation": 0,
+      "zIndex": 8,
+      "locked": false,
+      "visible": true,
+      "content": "备注：{{备注}}",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 10,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#939aa3",
+        "textAlign": "left",
+        "lineHeight": 1.6,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    },
+    {
+      "id": "comp-footer-001",
+      "type": "text",
+      "position": { "x": 0, "y": 455 },
+      "size": { "width": 170, "height": 30 },
+      "rotation": 0,
+      "zIndex": 9,
+      "locked": false,
+      "visible": true,
+      "content": "客户确认签字：______________    日期：______________",
+      "style": {
+        "fontFamily": "system-ui, -apple-system, sans-serif",
+        "fontSize": 11,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "color": "#1f2329",
+        "textAlign": "left",
+        "lineHeight": 1.5,
+        "letterSpacing": 0,
+        "backgroundColor": "transparent",
+        "border": "none",
+        "borderRadius": 0,
+        "padding": 0
+      },
+      "binding": { "fieldId": "", "fieldName": "", "format": {}, "fallback": "" },
+      "condition": null
+    }
+  ]
+}
